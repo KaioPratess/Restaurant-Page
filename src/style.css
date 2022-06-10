@@ -8,15 +8,13 @@
 img {
   display: block;
   width: 100%;
-}
-
-.content {
-  width: 100%;
   height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
-#content.home {
-  background: url('./img/thumb-1920-880054.jpg') no-repeat center/cover;
+#content {
+  display: grid;
 }
 
 /* Header */
@@ -33,6 +31,7 @@ a {
   color: white;
   height: 80px;
   padding: 0 60px;
+  grid-row: 1;
 }
 
 .logo {
@@ -53,7 +52,18 @@ a {
   padding: 27px 10px;
 }
 
-/* Intro */
+/* footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  color: white;
+  background-color: rgba(2,2,2,.5);
+  grid-row: 0;
+}
+
+/* Intro - home.js */
 .intro {
   height: calc(100vh - 80px);
   display: flex;
@@ -82,12 +92,63 @@ a {
   padding-left: 10px;
 }
 
-/* footer */
-.footer {
+/* Menu - menu.js */
+.title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+.dishes-sec, .drinks-sec {
+  margin-top: 21px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 10px 0;
-  color: white;
-  background-color: rgba(2,2,2,.5);
+}
+
+.drinks-sec {
+  margin-bottom: 134px;
+}
+
+.dishes-bg, .drinks-bg {
+  width: 100%;
+  height: 108px;
+  margin-bottom: 48px;
+  padding-left: 76px;
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.dishes-bg {
+  background: url('./img/dishes-bg.png');
+}
+
+.drinks-bg {
+  background: url('./img/drinks-bg.png');
+  margin-top: 60px;
+}
+
+.opt-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 80px;
+}
+
+.img-div {
+  height: 195px;
+  width: 347px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plate-name {
+  margin-top: -150px;
+}
+
+.desc {
+  max-width: 27ch;
 }
