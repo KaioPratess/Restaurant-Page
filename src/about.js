@@ -10,6 +10,8 @@ const about = function() {
     content.append(title)
 
     function createSec() {
+        const aboutBg = document.createElement('div');
+              aboutBg.classList.add('about-bg')
         const aboutContainer = document.createElement('div');
               aboutContainer.classList.add('about-container');
 
@@ -24,7 +26,8 @@ const about = function() {
         
         aboutContainer.append(imgDiv, p);
         imgDiv.append(img);
-        content.append(aboutContainer);
+        aboutBg.append(aboutContainer);
+        content.append(aboutBg);
     }
 
     createSec();

@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white;
 }
 
 img {
@@ -15,6 +16,7 @@ img {
 
 #content {
   display: grid;
+  background: url('./img/background-home.jpg') no-repeat center/cover;
 }
 
 /* Header */
@@ -123,11 +125,11 @@ a {
 }
 
 .dishes-bg {
-  background: url('./img/dishes-bg.png');
+  background: url('./img/dishes.png');
 }
 
 .drinks-bg {
-  background: url('./img/drinks-bg.png');
+  background: url('./img/drinks.png');
   margin-top: 60px;
 }
 
@@ -154,11 +156,21 @@ a {
 }
 
 /* About - about.js */
+.about-bg {
+  display: flex;
+  justify-content: center;
+}
+
 .about-container {
-  margin-top: 25px;
   display: flex;
   gap: 25px;
-  padding: 0 70px;
+  padding: 30px 40px;
+  border-radius: 20px;
+  background:rgba(0, 0, 0, .5);
+  margin-bottom: 80px;
+  margin-top: 25px;
+  height: 460px;
+  width: 90%;
 }
 
 .img-container {
@@ -168,8 +180,93 @@ a {
 }
 
 .about-p {
-  max-width: 60ch;
+  max-width: 50ch;
   font-size: 1.25rem;
 }
 
 /* Contact - contact.js */
+.contact-bg {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 25px 0 80px 0;
+  background-color: rgba(0, 0, 0, .5);
+  border-radius: 20px;
+  padding: 40px;
+  width: 1200px;
+}
+
+.map-container {
+  width: 500px;
+  height: 455px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  justify-self: end;
+}
+
+#contact {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+}
+
+#contact div label {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 1.125rem;
+}
+
+#contact div input {
+  width: 100%;
+  height: 26px;
+  margin-bottom: 13px;
+  padding: 0 5px;
+  color: black;
+}
+
+#contact div textarea {
+  width: 100%;
+  height: 92px;
+  resize: none;
+  outline: none;
+  padding: 5px;
+  color: black;
+}
+
+.btn {
+  font-size: 1.125rem;
+  padding: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  color: black;
+}
+
+.contact-container p {
+  grid-column: 2;
+  grid-row: 1;
+  white-space: pre-line;
+  align-self: end;
+  font-size: 1.125rem;
+  margin-bottom: 52px;
+  margin-left: 85px;
+}
+
+.social-media {
+  display: flex;
+  gap: 16px;
+  grid-column: 2;
+  grid-row: 1;
+  align-self: end;
+  margin-left: 85px;
+}
+
+.social-media-svg {
+  width: 40px;
+  height: 40px;
+}

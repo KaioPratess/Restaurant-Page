@@ -1,4 +1,5 @@
-import backgroundImg from './img/background-home.jpg'
+import {openMenu, openAbout, openContact, openHome} from './tabFunctions.js';
+
 
 const home = (function () {
     const content = document.querySelector('#content');
@@ -40,6 +41,11 @@ const home = (function () {
           header.appendChild(logo);
           header.appendChild(nav);
           content.appendChild(header);
+
+          menu.addEventListener('click', openMenu);
+          about.addEventListener('click', openAbout);
+          contact.addEventListener('click', openContact);
+          logo.addEventListener('click', openHome);
     }
 
     function createIntro() {
@@ -54,8 +60,6 @@ const home = (function () {
           const desc = document.createElement('p');
                 desc.classList.add('desc')
                 desc.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec odio ex, efficitur sit amet mi imperdiet, lacinia placerat nulla.'
-
-          content.style.background = `url(${backgroundImg}) no-repeat center/cover`;
 
           descContainer.appendChild(copy);   
           descContainer.appendChild(desc);
