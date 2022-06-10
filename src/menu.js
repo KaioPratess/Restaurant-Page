@@ -13,7 +13,7 @@ import drink5Img from './img/drink5.jpg';
 import drink6Img from './img/drink6.jpg';
 
 
-const menu = (function() {
+const menu = function() {
     const content = document.querySelector('#content');
 
     const title = document.createElement('h1');
@@ -144,6 +144,6 @@ const menu = (function() {
     })
 
 
-})()
+}
 
 export {menu};

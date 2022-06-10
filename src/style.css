@@ -152,3 +152,24 @@ a {
 .desc {
   max-width: 27ch;
 }
+
+/* About - about.js */
+.about-container {
+  margin-top: 25px;
+  display: flex;
+  gap: 25px;
+  padding: 0 70px;
+}
+
+.img-container {
+  width: 610px;
+  height: 397px;
+  margin-bottom: 135px;
+}
+
+.about-p {
+  max-width: 60ch;
+  font-size: 1.25rem;
+}
+
+/* Contact - contact.js */
